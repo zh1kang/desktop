@@ -11,7 +11,7 @@ index e8da75f2c27e312e0170520959d3daf883f56048..e1be6c694ab7d9d7268a48e3ae761549
    <link rel="localization" href="branding/brand.ftl"/>
    <link rel="localization" href="browser/browser.ftl"/>
      <!-- Used by fontbuilder.js -->
-@@ -121,6 +123,26 @@
+@@ -121,6 +123,31 @@
          iconsrc="chrome://browser/skin/preferences/category-general.svg"
          data-l10n-id="pane-general-title">
        </html:moz-page-nav-button>
@@ -19,6 +19,11 @@ index e8da75f2c27e312e0170520959d3daf883f56048..e1be6c694ab7d9d7268a48e3ae761549
 +        view="paneZenLooks"
 +        iconsrc="chrome://browser/skin/customize.svg"
 +        data-l10n-id="pane-zen-looks-title">
++      </html:moz-page-nav-button>
++      <html:moz-page-nav-button id="category-zen-tweaks"
++        view="paneZenTweaks"
++        iconsrc="chrome://browser/skin/zen-icons/settings.svg"
++        data-l10n-id="pane-zen-tweaks-title">
 +      </html:moz-page-nav-button>
 +      <html:moz-page-nav-button id="category-zen-tabs-management"
 +        view="paneZenTabManagement"
@@ -38,11 +43,12 @@ index e8da75f2c27e312e0170520959d3daf883f56048..e1be6c694ab7d9d7268a48e3ae761549
        <html:moz-page-nav-button id="category-sync"
          hidden="true"
          view="paneSync"
-@@ -257,6 +279,9 @@
+@@ -257,6 +284,10 @@
  #include privacy.inc.xhtml
  #include sync.inc.xhtml
  #include moreFromMozilla.inc.xhtml
 +#include zenLooksAndFeel.inc.xhtml
++#include zenTweaks.inc.xhtml
 +#include zenTabsManagement.inc.xhtml
 +#include zenMarketplace.inc.xhtml
          </vbox>

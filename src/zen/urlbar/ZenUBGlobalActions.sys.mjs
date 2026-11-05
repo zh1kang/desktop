@@ -306,6 +306,21 @@ const globalActionsTemplate = [
     icon: "chrome://browser/skin/zen-icons/extension.svg",
   },
   {
+    l10nId: "zen-action-group-tabs-by-domain",
+    command: "cmd_zenTweaksGroupTabs",
+    icon: "chrome://browser/skin/zen-icons/container-tab.svg",
+    isAvailable: () =>
+      Services.prefs.getBoolPref("zen.tweaks.group-tabs-by-domain", true),
+  },
+  {
+    l10nId: "zen-action-unload-tab",
+    command: "cmd_zenTweaksUnloadTab",
+    icon: "chrome://browser/skin/zen-icons/close.svg",
+    isAvailable: window =>
+      Services.prefs.getBoolPref("zen.tweaks.unload-tab", false) &&
+      isNotEmptyTab(window),
+  },
+  {
     l10nId: "zen-action-switch-to-automatic-appearance",
     command: () => Services.prefs.setIntPref("zen.view.window.scheme", 2),
     icon: "chrome://browser/skin/zen-icons/sparkles.svg",

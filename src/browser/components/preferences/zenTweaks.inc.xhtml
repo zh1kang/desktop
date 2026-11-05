@@ -1,0 +1,157 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+<html:template id="template-paneZenTweaks">
+<hbox id="zenTweaksCategory"
+      class="subcategory"
+      hidden="true"
+      data-category="paneZenTweaks">
+<html:h1 data-l10n-id="pane-zen-tweaks-title"/>
+</hbox>
+
+<groupbox id="zenTweaksIntro" data-category="paneZenTweaks" hidden="true">
+  <description class="description-deemphasized" data-l10n-id="zen-tweaks-description"/>
+</groupbox>
+
+<groupbox id="zenTweaksToolbarGroup" data-category="paneZenTweaks" hidden="true" class="highlighting-group">
+  <label><html:h2 data-l10n-id="zen-tweaks-toolbar-header"/></label>
+  <checkbox id="zenTweaksHideToolbar"
+            data-l10n-id="zen-tweaks-hide-toolbar"
+            preference="zen.tweaks.hide-toolbar"/>
+  <vbox class="indent">
+    <checkbox id="zenTweaksRevealToolbar"
+              data-l10n-id="zen-tweaks-reveal-toolbar-on-hover"
+              preference="zen.tweaks.reveal-toolbar-on-hover"/>
+    <checkbox id="zenTweaksShowToolbarWithSidebar"
+              data-l10n-id="zen-tweaks-show-toolbar-with-sidebar"
+              preference="zen.tweaks.show-toolbar-with-sidebar"/>
+    <checkbox id="zenTweaksShowToolbarOnNewTab"
+              data-l10n-id="zen-tweaks-show-toolbar-on-new-tab"
+              preference="zen.tweaks.show-toolbar-on-new-tab"/>
+    <checkbox id="zenTweaksPlainSelectedTab"
+              data-l10n-id="zen-tweaks-plain-selected-tab"
+              preference="zen.tweaks.plain-selected-tab"/>
+    <checkbox id="zenTweaksShowToolbarOnCopy"
+              data-l10n-id="zen-tweaks-show-toolbar-on-copy"
+              preference="zen.tweaks.show-toolbar-on-copy"/>
+  </vbox>
+  <checkbox id="zenTweaksToggleToolbar"
+            data-l10n-id="zen-tweaks-toggle-toolbar"
+            preference="zen.tweaks.toggle-toolbar"/>
+  <checkbox id="zenTweaksShowAddressField"
+            data-l10n-id="zen-tweaks-show-address-field"
+            preference="zen.tweaks.show-address-field"/>
+  <checkbox id="zenTweaksHideSidebarButton"
+            data-l10n-id="zen-tweaks-hide-sidebar-button"
+            preference="zen.tweaks.hide-sidebar-button"/>
+  <checkbox id="zenTweaksQuietDownloads"
+            data-l10n-id="zen-tweaks-quiet-downloads"
+            preference="zen.tweaks.quiet-downloads"/>
+  <checkbox id="zenTweaksExtensionsShortcut"
+            data-l10n-id="zen-tweaks-extensions-shortcut"
+            preference="zen.tweaks.extensions-shortcut"/>
+  <checkbox id="zenTweaksHideHistory"
+            data-l10n-id="zen-tweaks-hide-history-suggestions"
+            preference="zen.tweaks.hide-history-suggestions"/>
+</groupbox>
+
+<groupbox id="zenTweaksPageGroup" data-category="paneZenTweaks" hidden="true" class="highlighting-group">
+  <label><html:h2 data-l10n-id="zen-tweaks-page-header"/></label>
+  <checkbox id="zenTweaksEdgeToEdge"
+            data-l10n-id="zen-tweaks-edge-to-edge"
+            preference="zen.tweaks.edge-to-edge"/>
+  <vbox class="indent">
+    <checkbox id="zenTweaksSquareCorners"
+              data-l10n-id="zen-tweaks-square-sidebar-corners"
+              preference="zen.tweaks.square-sidebar-corners"/>
+  </vbox>
+  <checkbox id="zenTweaksHideLinkAddress"
+            data-l10n-id="zen-tweaks-hide-link-address"
+            preference="zen.tweaks.hide-link-address"/>
+</groupbox>
+
+<groupbox id="zenTweaksSidebarGroup" data-category="paneZenTweaks" hidden="true" class="highlighting-group">
+  <label><html:h2 data-l10n-id="zen-tweaks-sidebar-header"/></label>
+  <checkbox id="zenTweaksCompactSidebarHeader"
+            data-l10n-id="zen-tweaks-compact-sidebar-header"
+            preference="zen.tweaks.compact-sidebar-header"/>
+  <checkbox id="zenTweaksHideGroupBackground"
+            data-l10n-id="zen-tweaks-hide-group-background"
+            preference="zen.tweaks.hide-group-background"/>
+  <checkbox id="zenTweaksHidePinnedBorder"
+            data-l10n-id="zen-tweaks-hide-pinned-tab-border"
+            preference="zen.tweaks.hide-pinned-tab-border"/>
+  <checkbox id="zenTweaksHidePinnedCard"
+            data-l10n-id="zen-tweaks-hide-pinned-tab-card"
+            preference="zen.tweaks.hide-pinned-tab-card"/>
+  <checkbox id="zenTweaksTranslucentSidebar"
+            data-l10n-id="zen-tweaks-translucent-sidebar"
+            preference="zen.tweaks.translucent-sidebar"/>
+</groupbox>
+
+<groupbox id="zenTweaksTabsGroup" data-category="paneZenTweaks" hidden="true" class="highlighting-group">
+  <label><html:h2 data-l10n-id="zen-tweaks-tabs-header"/></label>
+  <checkbox id="zenTweaksGroupTabs"
+            data-l10n-id="zen-tweaks-group-tabs"
+            preference="zen.tweaks.group-tabs-by-domain"/>
+  <checkbox id="zenTweaksUnloadTab"
+            data-l10n-id="zen-tweaks-unload-tab"
+            preference="zen.tweaks.unload-tab"/>
+  <checkbox id="zenTweaksCloseFromSwitcher"
+            data-l10n-id="zen-tweaks-close-from-tab-switcher"
+            preference="zen.tweaks.close-from-tab-switcher"/>
+  <checkbox id="zenTweaksHideSleepingTabs"
+            data-l10n-id="zen-tweaks-hide-sleeping-tabs"
+            preference="zen.tabs.ctrl-tab.ignore-pending-tabs"/>
+</groupbox>
+
+<groupbox id="zenTweaksWindowGroup" data-category="paneZenTweaks" hidden="true" class="highlighting-group">
+  <label><html:h2 data-l10n-id="zen-tweaks-window-header"/></label>
+  <checkbox id="zenTweaksKeepWindowsActive"
+            data-l10n-id="zen-tweaks-keep-windows-active"
+            preference="zen.tweaks.keep-windows-active"/>
+  <checkbox id="zenTweaksHideWindowControls"
+            data-l10n-id="zen-tweaks-hide-window-controls"
+            preference="zen.view.hide-window-controls"/>
+  <hbox align="center">
+    <label data-l10n-id="zen-tweaks-window-corners-label"/>
+    <menulist id="zenTweaksWindowCorners" preference="zen.tweaks.window-corner-radius">
+      <menupopup>
+        <menuitem data-l10n-id="zen-tweaks-corners-theme" value="-1"/>
+        <menuitem data-l10n-id="zen-tweaks-corners-16" value="16"/>
+        <menuitem data-l10n-id="zen-tweaks-corners-12" value="12"/>
+        <menuitem data-l10n-id="zen-tweaks-corners-10" value="10"/>
+        <menuitem data-l10n-id="zen-tweaks-corners-8" value="8"/>
+        <menuitem data-l10n-id="zen-tweaks-corners-square" value="0"/>
+      </menupopup>
+    </menulist>
+  </hbox>
+#ifdef XP_MACOSX
+  <hbox align="center">
+    <label data-l10n-id="zen-tweaks-window-material-label"/>
+    <menulist id="zenTweaksWindowMaterial" preference="zen.widget.macos.window-material">
+      <menupopup>
+        <menuitem data-l10n-id="zen-tweaks-material-hud" value="1"/>
+        <menuitem data-l10n-id="zen-tweaks-material-fullscreen" value="2"/>
+        <menuitem data-l10n-id="zen-tweaks-material-popover" value="3"/>
+        <menuitem data-l10n-id="zen-tweaks-material-menu" value="4"/>
+        <menuitem data-l10n-id="zen-tweaks-material-tooltip" value="5"/>
+        <menuitem data-l10n-id="zen-tweaks-material-header" value="6"/>
+        <menuitem data-l10n-id="zen-tweaks-material-underlay" value="7"/>
+      </menupopup>
+    </menulist>
+  </hbox>
+#endif
+</groupbox>
+
+<groupbox id="zenTweaksNewTabGroup" data-category="paneZenTweaks" hidden="true" class="highlighting-group">
+  <label><html:h2 data-l10n-id="zen-tweaks-newtab-header"/></label>
+  <checkbox id="zenTweaksHideNewTabLogo"
+            data-l10n-id="zen-tweaks-hide-newtab-logo"
+            preference="zen.tweaks.hide-newtab-logo"/>
+  <checkbox id="zenTweaksHidePersonalize"
+            data-l10n-id="zen-tweaks-hide-personalize-button"
+            preference="zen.tweaks.hide-personalize-button"/>
+</groupbox>
+</html:template>

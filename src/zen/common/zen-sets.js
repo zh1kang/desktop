@@ -117,6 +117,11 @@
     cmd_zenNewNavigatorUnsynced: () =>
       OpenBrowserWindow({ zenSyncedWindow: false }),
     cmd_zenToggleLibrary: () => lazy.ZenLibrary.toggle(),
+
+    cmd_zenTweaksToggleToolbar: () => gZenTweaks?.toggleToolbar(),
+    cmd_zenTweaksExtensions: () => gZenTweaks?.openExtensions(),
+    cmd_zenTweaksGroupTabs: () => gZenTweaks?.groupTabsByDomain(),
+    cmd_zenTweaksUnloadTab: () => gZenTweaks?.unloadContextTab(),
   };
 
   function handleZenCommand(event) {

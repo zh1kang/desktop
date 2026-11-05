@@ -1,0 +1,88 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+# DiaTweaks, adapted to Zen. Switches default off except Group Tabs by
+# Domain, which only adds a menu item until it is used.
+
+- name: zen.tweaks.hide-toolbar
+  value: false
+
+- name: zen.tweaks.reveal-toolbar-on-hover
+  value: false
+
+- name: zen.tweaks.show-toolbar-with-sidebar
+  value: false
+
+- name: zen.tweaks.show-toolbar-on-new-tab
+  value: false
+
+- name: zen.tweaks.plain-selected-tab
+  value: false
+
+- name: zen.tweaks.show-toolbar-on-copy
+  value: false
+
+- name: zen.tweaks.toggle-toolbar
+  value: false
+
+- name: zen.tweaks.show-address-field
+  value: false
+
+- name: zen.tweaks.hide-sidebar-button
+  value: false
+
+- name: zen.tweaks.quiet-downloads
+  value: false
+
+- name: zen.tweaks.extensions-shortcut
+  value: false
+
+- name: zen.tweaks.edge-to-edge
+  value: false
+
+- name: zen.tweaks.square-sidebar-corners
+  value: false
+
+- name: zen.tweaks.hide-link-address
+  value: false
+
+- name: zen.tweaks.hide-history-suggestions
+  value: false
+
+- name: zen.tweaks.compact-sidebar-header
+  value: false
+
+- name: zen.tweaks.hide-group-background
+  value: false
+
+- name: zen.tweaks.hide-pinned-tab-border
+  value: false
+
+- name: zen.tweaks.hide-pinned-tab-card
+  value: false
+
+- name: zen.tweaks.translucent-sidebar
+  value: false
+
+- name: zen.tweaks.group-tabs-by-domain
+  value: true
+
+- name: zen.tweaks.unload-tab
+  value: false
+
+- name: zen.tweaks.close-from-tab-switcher
+  value: false
+
+- name: zen.tweaks.keep-windows-active
+  value: false
+
+# -1 keeps the theme radius. Other values are CSS pixels.
+- name: zen.tweaks.window-corner-radius
+  value: -1
+
+- name: zen.tweaks.hide-newtab-logo
+  value: false
+
+- name: zen.tweaks.hide-personalize-button
+  value: false

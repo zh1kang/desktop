@@ -43,4 +43,11 @@
   <key id="zen-new-unsynced-window" key="N" modifiers="accel,shift" command="cmd_zenNewNavigatorUnsynced"/>
   <key id="zen-copy-url" key="C" modifiers="accel,shift" command="cmd_zenCopyCurrentURL"/>
   <key id="zen-copy-url-markdown" key="C" modifiers="accel,alt,shift" command="cmd_zenCopyCurrentURLMarkdown"/>
+
+#ifdef XP_MACOSX
+  <key id="zen-tweaks-toggle-toolbar" key="D" modifiers="control" command="cmd_zenTweaksToggleToolbar"/>
+#else
+  <key id="zen-tweaks-toggle-toolbar" key="D" modifiers="alt" command="cmd_zenTweaksToggleToolbar"/>
+#endif
+  <key id="zen-tweaks-extensions" key="X" modifiers="accel,shift" command="cmd_zenTweaksExtensions"/>
 </keyset>

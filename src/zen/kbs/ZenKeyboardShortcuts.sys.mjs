@@ -77,6 +77,13 @@ const ZEN_KEY_CATEGORIES = [
       ["zen-copy-url-markdown", "zen-text-action-copy-url-markdown-shortcut"],
     ],
   },
+  {
+    l10nId: "zenCKSOption-group-zen-tweaks",
+    keys: [
+      ["zen-tweaks-toggle-toolbar", "zen-tweaks-shortcut-toggle-toolbar"],
+      ["zen-tweaks-extensions", "zen-tweaks-shortcut-extensions"],
+    ],
+  },
 ];
 
 /**

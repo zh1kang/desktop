@@ -37,6 +37,15 @@ tab-context-zen-edit-title =
 tab-context-zen-edit-icon =
     .label = Change Icon…
 
+zen-tweaks-group-tabs-menu =
+    .label = Group Tabs by Domain
+    .accesskey = G
+zen-tweaks-unload-tab-menu =
+    .label = Unload Tab
+    .accesskey = U
+zen-tweaks-group-tabs-none = No tabs to group
+zen-tweaks-group-tabs-unavailable = Couldn’t group tabs by domain
+
 zen-themes-corrupted = Your { -brand-short-name } mods file is corrupted. They have been reset to the default theme.
 
 # note: Do not translate the "<br/>" tags in the following string

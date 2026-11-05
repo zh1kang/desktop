@@ -648,6 +648,51 @@ var gZenMarketplaceManager = {
 const kZenExtendedSidebar = "zen.view.sidebar-expanded";
 const kZenSingleToolbar = "zen.view.use-single-toolbar";
 
+var gZenTweaksSettings = {
+  TOOLBAR_OPTIONS: [
+    "zenTweaksRevealToolbar",
+    "zenTweaksShowToolbarWithSidebar",
+    "zenTweaksShowToolbarOnNewTab",
+    "zenTweaksPlainSelectedTab",
+    "zenTweaksShowToolbarOnCopy",
+  ],
+
+  init() {
+    if (this.__hasInitialized) {
+      return;
+    }
+    this.__hasInitialized = true;
+    for (const pref of ["zen.tweaks.hide-toolbar", "zen.tweaks.edge-to-edge"]) {
+      Services.prefs.addObserver(pref, this);
+    }
+    window.addEventListener("unload", () => {
+      for (const pref of ["zen.tweaks.hide-toolbar", "zen.tweaks.edge-to-edge"]) {
+        Services.prefs.removeObserver(pref, this);
+      }
+    });
+    this.sync();
+  },
+
+  observe() {
+    this.sync();
+  },
+
+  sync() {
+    const hideToolbar = Services.prefs.getBoolPref("zen.tweaks.hide-toolbar", false);
+    for (const id of this.TOOLBAR_OPTIONS) {
+      const control = document.getElementById(id);
+      if (control) {
+        control.disabled = !hideToolbar;
+      }
+    }
+    const edgeToEdge = Services.prefs.getBoolPref("zen.tweaks.edge-to-edge", false);
+    const squareCorners = document.getElementById("zenTweaksSquareCorners");
+    if (squareCorners) {
+      squareCorners.disabled = !edgeToEdge;
+    }
+  },
+};
+
 var gZenLooksAndFeel = {
   init() {
     if (this.__hasInitialized) {
@@ -869,6 +914,35 @@ Preferences.addAll([
     type: "bool",
     default: false,
   },
+  { id: "zen.tweaks.hide-toolbar", type: "bool", default: false },
+  { id: "zen.tweaks.reveal-toolbar-on-hover", type: "bool", default: false },
+  { id: "zen.tweaks.show-toolbar-with-sidebar", type: "bool", default: false },
+  { id: "zen.tweaks.show-toolbar-on-new-tab", type: "bool", default: false },
+  { id: "zen.tweaks.plain-selected-tab", type: "bool", default: false },
+  { id: "zen.tweaks.show-toolbar-on-copy", type: "bool", default: false },
+  { id: "zen.tweaks.toggle-toolbar", type: "bool", default: false },
+  { id: "zen.tweaks.show-address-field", type: "bool", default: false },
+  { id: "zen.tweaks.hide-sidebar-button", type: "bool", default: false },
+  { id: "zen.tweaks.quiet-downloads", type: "bool", default: false },
+  { id: "zen.tweaks.extensions-shortcut", type: "bool", default: false },
+  { id: "zen.tweaks.edge-to-edge", type: "bool", default: false },
+  { id: "zen.tweaks.square-sidebar-corners", type: "bool", default: false },
+  { id: "zen.tweaks.hide-link-address", type: "bool", default: false },
+  { id: "zen.tweaks.hide-history-suggestions", type: "bool", default: false },
+  { id: "zen.tweaks.compact-sidebar-header", type: "bool", default: false },
+  { id: "zen.tweaks.hide-group-background", type: "bool", default: false },
+  { id: "zen.tweaks.hide-pinned-tab-border", type: "bool", default: false },
+  { id: "zen.tweaks.hide-pinned-tab-card", type: "bool", default: false },
+  { id: "zen.tweaks.translucent-sidebar", type: "bool", default: false },
+  { id: "zen.tweaks.group-tabs-by-domain", type: "bool", default: true },
+  { id: "zen.tweaks.unload-tab", type: "bool", default: false },
+  { id: "zen.tweaks.close-from-tab-switcher", type: "bool", default: false },
+  { id: "zen.tweaks.keep-windows-active", type: "bool", default: false },
+  { id: "zen.tweaks.window-corner-radius", type: "int", default: -1 },
+  { id: "zen.tweaks.hide-newtab-logo", type: "bool", default: false },
+  { id: "zen.tweaks.hide-personalize-button", type: "bool", default: false },
+  { id: "zen.view.hide-window-controls", type: "bool", default: true },
+  { id: "zen.widget.macos.window-material", type: "int", default: 1 },
 ]);
 
 Preferences.addSetting({
